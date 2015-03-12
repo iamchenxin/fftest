@@ -1,0 +1,7 @@
+base    fftest
+author  lispsss
+email
+date    2015-02-27
+name    fftest
+desc    testest
+url     http://dokuwiki.org/plugin:test
