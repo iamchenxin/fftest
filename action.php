@@ -31,8 +31,8 @@ class  action_plugin_fftest extends DokuWiki_Action_Plugin{
 
         //e.g. access additional request variables
         global $INPUT; //available since release 2012-10-13 "Adora Belle"
-        $pageid ="en:";
-        $pageid =$pageid+ $INPUT->str('pageid');
+
+        $pageid =$INPUT->str('pageid');
 
         $target = $INPUT->str("target");
 

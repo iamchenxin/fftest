@@ -11,14 +11,15 @@ function xxajax_get(){
 
     var pageid= jQuery("#xxpageid").val();
     var mdata=new Object();
-    mdata['pageid']=pageid;
+    mdata['pageid']="en:"+pageid;
     mdata['call']="fftest";
+    var url = DOKU_BASE + 'lib/exe/ajax.php';
     if(jQuery("#xxckpage").prop("checked")==true){
         mdata['target']="page";
-        jQuery.ajax({url:"http://w.ct.com/lib/exe/ajax.php",data:mdata,success:xxajax_process,dataType:"jsonp",crossDomain:true});
+        jQuery.ajax({url:url,data:mdata,success:xxajax_process,dataType:"jsonp",crossDomain:true});
     }else if(jQuery("#xxcktoc").prop("checked")==true){
         mdata['target']="toc";
-        jQuery.ajax({url:"http://w.ct.com/lib/exe/ajax.php",data:mdata,success:xxajax_process,dataType:"jsonp",crossDomain:true});
+        jQuery.ajax({url:url,data:mdata,success:xxajax_process,dataType:"jsonp",crossDomain:true});
     }
     if(jQuery("#xxckvoice").prop("checked")==true){
         voice_mx(pageid);
